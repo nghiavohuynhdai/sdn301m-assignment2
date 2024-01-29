@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon",
-    "tailwindcss": "npx tailwindcss -i ./src/views/styles/input.css -o ./src/public/styles/output.css",
+    "tailwindcss": "npx tailwindcss -i ./src/views/styles/input.css -o ./public/styles/output.css",
     "build": "rimraf ./dist && tsc && tsc-alias",
-    "start": "NODE_ENV=production node dist/index.js",
+    "start": "NODE_ENV=production node dist/api/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check .",

@@ -1,5 +1,4 @@
 import { Router, RequestHandler } from 'express'
-import { isValidObjectId } from 'mongoose'
 import { ResultDto } from '~/dto/resultDto'
 import { BadRequestException } from '~/exceptions/badRequestException'
 import { NotFoundException } from '~/exceptions/notFoundException'

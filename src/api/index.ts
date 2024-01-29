@@ -4,11 +4,11 @@ import cors from 'cors'
 import morgan from 'morgan'
 import '~/configuration/dotenv'
 import path from 'path'
-import mongoDbConnect from './data/connection'
+import mongoDbConnect from '~/data/connection'
 import { engine } from 'express-handlebars'
-import { categoryRouter } from './routers/categoryRouter'
-import { globalExceptionHandlingMiddleware } from './middlewares/globalExceptionHandlingMiddleware'
-import { orchidRouter } from './routers/orchildRouter'
+import { categoryRouter } from '~/routers/categoryRouter'
+import { globalExceptionHandlingMiddleware } from '~/middlewares/globalExceptionHandlingMiddleware'
+import { orchidRouter } from '~/routers/orchidRouter'
 
 const hostname = 'localhost'
 const port = Number.parseInt(process.env.PORT || '3000')
@@ -19,7 +19,7 @@ mongoDbConnect(mongoDbUrl)
 const app = express()
 
 app.use(cors())
-app.use(express.static(path.join(__dirname, '/public')))
+app.use(express.static(path.join(__dirname, '../public')))
 app.use(
   urlencoded({
     extended: true
