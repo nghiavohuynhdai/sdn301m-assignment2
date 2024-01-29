@@ -12,7 +12,7 @@ import { orchidRouter } from './routers/orchildRouter'
 
 const hostname = 'localhost'
 const port = Number.parseInt(process.env.PORT || '3000')
-const mongoDbUrl = process.env.MONGO_DB_URL || ''
+const mongoDbUrl = process.env.MONGODB_URI || ''
 
 mongoDbConnect(mongoDbUrl)
 
