@@ -19,7 +19,7 @@ mongoDbConnect(mongoDbUrl)
 const app = express()
 
 app.use(cors())
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.static(path.join(__dirname, '../../public')))
 app.use(
   urlencoded({
     extended: true
@@ -31,7 +31,7 @@ app.use(morgan('dev'))
 
 app.engine('hbs', engine({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, '/views'))
+app.set('views', path.join(__dirname, '../views'))
 
 app.use('/categories', categoryRouter)
 app.use('/orchids', orchidRouter)
